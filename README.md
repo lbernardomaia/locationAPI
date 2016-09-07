@@ -63,5 +63,5 @@ The endpoint always responds with a JSON array that contains JSON objects as ele
 Each object, among other keys, has a name and a geo_position key.
 The geo_position key is an object with latitude and longitude fields.
 
-The program should query the API with the user input and create a CSV file from it. 
+The program query the API with the user input and create a CSV file from it. 
 The CSV file should have the form: _id, name, type, latitude, longitude

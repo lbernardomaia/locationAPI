@@ -1,4 +1,4 @@
-package service;
+package com.suggestAPI.service;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

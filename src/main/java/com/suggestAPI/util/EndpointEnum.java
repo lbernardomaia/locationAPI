@@ -1,4 +1,4 @@
-package util;
+package com.suggestAPI.util;
 
 public enum  EndpointEnum {
     SUGGEST("suggest");

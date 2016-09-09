@@ -1,14 +1,11 @@
-package service;
+package com.suggestAPI.service;
 
-import domain.City;
+import com.suggestAPI.domain.City;
 import org.junit.Test;
 import org.springframework.web.client.RestTemplate;
-import service.SuggestCityService;
-import util.FileUtil;
-import util.PropertyUtil;
+import com.suggestAPI.util.FileUtil;
+import com.suggestAPI.util.PropertyUtil;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.List;
 
 public class SuggestCityServiceIntegrationTest {

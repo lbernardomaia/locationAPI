@@ -1,15 +1,15 @@
-package service;
+package com.suggestAPI.service;
 
-import domain.City;
+import com.suggestAPI.domain.City;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.client.RestTemplate;
-import util.EndpointEnum;
-import util.FileUtil;
-import util.PropertyUtil;
+import com.suggestAPI.util.EndpointEnum;
+import com.suggestAPI.util.FileUtil;
+import com.suggestAPI.util.PropertyUtil;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,9 +32,8 @@ public class SuggestCityService implements ISuggestCityService{
     }
 
     protected List<City> getSuggestedCities(String city) {
-        List<City> suggestedCities = null;
-        if (isEmptyCity(city)) {
-            return suggestedCities;
+       if (isEmptyCity(city)) {
+            return new ArrayList<>();
         }
 
         String propertyValue = EndpointEnum.SUGGEST.getKey();

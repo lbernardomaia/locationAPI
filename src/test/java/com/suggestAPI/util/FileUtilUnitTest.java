@@ -1,6 +1,6 @@
-package util;
+package com.suggestAPI.util;
 
-import domain.City;
+import com.suggestAPI.domain.City;
 import org.junit.Test;
 
 import java.io.IOException;

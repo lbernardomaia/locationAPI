@@ -1,4 +1,4 @@
-package domain;
+package com.suggestAPI.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -11,7 +11,7 @@ public class City {
     private String name;
     private String type;
     @JsonProperty("geo_position")
-    private GeoPositon geoPositon;
+    private GeoPosition geoPosition;
 
     public long getId() {
         return id;
@@ -37,19 +37,19 @@ public class City {
         this.type = type;
     }
 
-    public GeoPositon getGeoPositon() {
-        return geoPositon;
+    public GeoPosition getGeoPosition() {
+        return geoPosition;
     }
 
-    public void setGeoPositon(GeoPositon geoPositon) {
-        this.geoPositon = geoPositon;
+    public void setGeoPosition(GeoPosition geoPosition) {
+        this.geoPosition = geoPosition;
     }
 
     public String toString(){
         return id + ", " +
                name + ", " +
                type + ", " +
-               geoPositon.getLatitude() + ", " +
-               geoPositon.getLongitude();
+               geoPosition.getLatitude() + ", " +
+               geoPosition.getLongitude();
     }
 }

@@ -1,6 +1,6 @@
-package domain;
+package com.suggestAPI.domain;
 
-public class GeoPositon {
+public class GeoPosition {
     private double latitude;
     private double longitude;
 

@@ -1,10 +1,10 @@
-package entryPoint;
+package com.suggestAPI;
 
 import org.springframework.web.client.RestTemplate;
-import service.ISuggestCityService;
-import service.SuggestCityService;
-import util.FileUtil;
-import util.PropertyUtil;
+import com.suggestAPI.service.ISuggestCityService;
+import com.suggestAPI.service.SuggestCityService;
+import com.suggestAPI.util.FileUtil;
+import com.suggestAPI.util.PropertyUtil;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

@@ -1,13 +1,12 @@
-package util;
+package com.suggestAPI.util;
 
-import domain.City;
-import entryPoint.SuggestAPI;
+import com.suggestAPI.SuggestAPI;
+import com.suggestAPI.domain.City;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URLDecoder;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;

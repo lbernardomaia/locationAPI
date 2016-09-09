@@ -108,7 +108,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>entryPoint.SuggestAPI</mainClass>
+                            <mainClass>com.suggestAPI.SuggestAPI</mainClass>
                         </manifest>
                     </archive>
 

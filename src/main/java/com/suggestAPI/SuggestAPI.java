@@ -2,7 +2,7 @@ package com.suggestAPI;
 
 import org.springframework.web.client.RestTemplate;
 import com.suggestAPI.service.ISuggestCityService;
-import com.suggestAPI.service.SuggestCityService;
+import com.suggestAPI.service.impl.SuggestCityServiceImpl;
 import com.suggestAPI.util.FileUtil;
 import com.suggestAPI.util.PropertyUtil;
 
@@ -22,7 +22,7 @@ public class SuggestAPI {
         restTemplate = new RestTemplate();
         propertyUtil = new PropertyUtil();
         fileUtil = new FileUtil();
-        suggestCityService = new SuggestCityService(restTemplate, propertyUtil, fileUtil);
+        suggestCityService = new SuggestCityServiceImpl(restTemplate, propertyUtil, fileUtil);
     }
 
     public static void main (String args []){

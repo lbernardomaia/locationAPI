@@ -1,4 +1,4 @@
-package com.suggestAPI.service;
+package com.suggestAPI.service.impl;
 
 import com.suggestAPI.domain.City;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import com.suggestAPI.util.PropertyUtil;
 import java.util.List;
 
 public class SuggestCityServiceIntegrationTest {
-    SuggestCityService suggestCityService;
+    SuggestCityServiceImpl suggestCityServiceImpl;
     PropertyUtil propertyUtil;
     RestTemplate restTemplate;
     FileUtil fileUtil;
@@ -18,7 +18,7 @@ public class SuggestCityServiceIntegrationTest {
         restTemplate = new RestTemplate();
         propertyUtil = new PropertyUtil();
         fileUtil = new FileUtil();
-        suggestCityService = new SuggestCityService(restTemplate, propertyUtil, fileUtil);
+        suggestCityServiceImpl = new SuggestCityServiceImpl(restTemplate, propertyUtil, fileUtil);
 
     }
 
@@ -26,7 +26,7 @@ public class SuggestCityServiceIntegrationTest {
     public void test_with_berlin_city(){
         String city = "berlin";
 
-        List<City> suggestedCities = suggestCityService.getSuggestedCities(city);
+        List<City> suggestedCities = suggestCityServiceImpl.getSuggestedCities(city);
         assert suggestedCities.size() > 1;
     }
 

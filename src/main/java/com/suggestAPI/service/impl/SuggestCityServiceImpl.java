@@ -1,6 +1,7 @@
-package com.suggestAPI.service;
+package com.suggestAPI.service.impl;
 
 import com.suggestAPI.domain.City;
+import com.suggestAPI.service.ISuggestCityService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.client.RestTemplate;
 import com.suggestAPI.util.EndpointEnum;
@@ -13,14 +14,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class SuggestCityService implements ISuggestCityService{
+public class SuggestCityServiceImpl implements ISuggestCityService {
     RestTemplate restTemplate;
     PropertyUtil propertyUtil;
     FileUtil fileUtil;
 
-    public SuggestCityService(RestTemplate restTemplate,
-                              PropertyUtil propertyUtil,
-                              FileUtil fileUtil){
+    public SuggestCityServiceImpl(RestTemplate restTemplate,
+                                  PropertyUtil propertyUtil,
+                                  FileUtil fileUtil){
         this.restTemplate = restTemplate;
         this.propertyUtil = propertyUtil;
         this.fileUtil = fileUtil;

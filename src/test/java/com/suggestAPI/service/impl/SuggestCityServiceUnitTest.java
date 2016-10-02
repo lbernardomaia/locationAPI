@@ -1,6 +1,7 @@
-package com.suggestAPI.service;
+package com.suggestAPI.service.impl;
 
 import com.suggestAPI.domain.City;
+import com.suggestAPI.service.impl.SuggestCityServiceImpl;
 import org.junit.Test;
 import org.springframework.web.client.RestTemplate;
 import com.suggestAPI.util.FileUtil;
@@ -15,7 +16,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class SuggestCityServiceUnitTest {
-    SuggestCityService suggestCityService;
+    SuggestCityServiceImpl suggestCityService;
     PropertyUtil propertyUtilMock;
     RestTemplate restTemplateMock;
     FileUtil fileUtilMock;
@@ -34,7 +35,7 @@ public class SuggestCityServiceUnitTest {
         fileUtilMock = mock(FileUtil.class);
         when(fileUtilMock.exportToCSV(anyListOf(City.class))).thenReturn(true);
 
-        suggestCityService = new SuggestCityService(restTemplateMock,
+        suggestCityService = new SuggestCityServiceImpl(restTemplateMock,
                                                     propertyUtilMock,
                                                     fileUtilMock);
 
